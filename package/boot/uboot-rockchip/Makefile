@@ -117,6 +117,13 @@ define U-Boot/rk3399/Default
   ATF:=$(RK3399_ATF)
 endef
 
+define U-Boot/fnet3399-rk3399
+  $(U-Boot/rk3399/Default)
+  NAME:=FNet 3399
+  BUILD_DEVICES:= \
+    erya_fnet-3399
+endef
+
 define U-Boot/guangmiao-g4c-rk3399
   $(U-Boot/rk3399/Default)
   NAME:=GuangMiao G4C
@@ -498,6 +505,7 @@ define U-Boot/rock-5c-rk3588s
 endef
 
 UBOOT_TARGETS := \
+  fnet3399-rk3399 \
   guangmiao-g4c-rk3399 \
   nanopc-t4-rk3399 \
   nanopi-r4s-rk3399 \
